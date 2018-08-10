@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<context:annotation-config/>
+   
+   <!-- CONSTRUCTION INJECTION -->
+  <!--  <bean id="employee" class="mypack.annotations.Employee">
+   		<constructor-arg value="Praful"></constructor-arg>
+   		<constructor-arg value="SSE-Infosys"></constructor-arg>
+   </bean>
+   
+   
+   <bean id="address" class="mypack.annotations.Address">
+   		<constructor-arg value="Mumbai"></constructor-arg>
+   		<constructor-arg value="411057"></constructor-arg>
+   </bean>
+ -->
+	<!-- SETTER INJECTION -->
+	
+	<bean id="employee1" class="mypack.annotations.Value.copy.Employee" >
+   </bean>
+   
+   
+   <bean id="officeAddress" class="mypack.annotations.Value.copy.Address">
+   		<property name="city" value="Pune"></property>
+   		<property name="pincode" value="411057"></property>
+   </bean>
+   
+   <bean id="homeAddress" class="mypack.annotations.Value.copy.Address">
+   		<property name="city" value="Mumbai"></property>
+   		<property name="pincode" value="4000019"></property>
+   </bean>
+   
+</beans>
